@@ -28,34 +28,36 @@
                             </h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-hover" id="datatable">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>No</th>
-                                        <th>Jenis Tiket</th>
-                                        <th>Harga</th>
-                                        <th>Tanggal Mulai</th>
-                                        <th>Tanggal Selesai</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($harga as $row) : ?>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="datatable">
+                                    <thead>
                                         <tr class="text-center">
-                                            <td><?= $no++ ?></td>
-                                            <td><?= $row['jenis_tiket'] ?></td>
-                                            <td><?= $row['harga'] ?></td>
-                                            <td><?= date('d-m-Y', strtotime($row['tgl_mulai'])) ?></td>
-                                            <td><?= date('d-m-Y', strtotime($row['tgl_selesai'])) ?></td>
-                                            <td>
-                                                <button class="btn  btn-warning btn-sm" title="Edit" data-toggle="modal" data-target="#edit-data" data-id="<?= $row['id_harga'] ?>" data-id_wisata="<?= $row['id_wisata'] ?>" data-harga="<?= $row['harga'] ?>" data-jenis="<?= $row['jenis_tiket'] ?>" data-mulai="<?= $row['tgl_mulai'] ?>" data-selesai="<?= $row['tgl_selesai'] ?>"><i class="fas fa-edit"></i></button></a>
-                                                <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_harga'] ?>"><i class="fas fa-trash"></i></button></a>
-                                            </td>
+                                            <th>No</th>
+                                            <th>Jenis Tiket</th>
+                                            <th>Harga</th>
+                                            <th>Tanggal Mulai</th>
+                                            <th>Tanggal Selesai</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php endforeach ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1; ?>
+                                        <?php foreach ($harga as $row) : ?>
+                                            <tr class="text-center">
+                                                <td><?= $no++ ?></td>
+                                                <td><?= $row['jenis_tiket'] ?></td>
+                                                <td><?= $row['harga'] ?></td>
+                                                <td><?= date('d-m-Y', strtotime($row['tgl_mulai'])) ?></td>
+                                                <td><?= date('d-m-Y', strtotime($row['tgl_selesai'])) ?></td>
+                                                <td>
+                                                    <button class="btn  btn-warning btn-sm" title="Edit" data-toggle="modal" data-target="#edit-data" data-id="<?= $row['id_harga'] ?>" data-id_wisata="<?= $row['id_wisata'] ?>" data-harga="<?= $row['harga'] ?>" data-jenis="<?= $row['jenis_tiket'] ?>" data-mulai="<?= $row['tgl_mulai'] ?>" data-selesai="<?= $row['tgl_selesai'] ?>"><i class="fas fa-edit"></i></button></a>
+                                                    <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_harga'] ?>"><i class="fas fa-trash"></i></button></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

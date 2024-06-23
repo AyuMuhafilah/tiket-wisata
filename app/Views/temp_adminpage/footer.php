@@ -18,14 +18,9 @@
 <script src="<?= base_url('admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js') ?>"></script>
 <script src="<?= base_url('admin/plugins/moment/moment.min.js') ?>"></script>
 <script src="<?= base_url('admin/plugins/daterangepicker/daterangepicker.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/datatables-buttons/js/dataTables.buttons.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/pdfmake/pdfmake.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/pdfmake/vfs_fonts.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/datatables-buttons/js/buttons.html5.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/datatables-buttons/js/buttons.print.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/datatables-buttons/js/buttons.colVis.min.js') ?>"></script>
-<script src="<?= base_url('admin/plugins/jszip/jszip.min.js') ?>"></script>
+<script src="<?= base_url('admin/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
+<script src="<?= base_url('admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') ?>"></script>
+
 <script>
     <?php if (session()->has('toast')) : ?>
         var toastData = <?= json_encode(session()->getFlashdata('toast')) ?>;

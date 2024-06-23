@@ -28,40 +28,42 @@
                             </h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-hover" id="datatable">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>No</th>
-                                        <th>Nama Wisata</th>
-                                        <th>Fasilitas</th>
-                                        <th>Nama Admin</th>
-                                        <th width="400px">Deskripsi</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($wisata as $row) : ?>
-                                        <tr>
-                                            <td class="text-center align-middle"><?= $no++ ?></td>
-                                            <td class="align-middle"><?= $row['nama_wisata'] ?></td>
-                                            <td>
-                                                <?php foreach ($row['fasilitas'] as $fas) : ?>
-                                                    <ul>
-                                                        <li><?= $fas['nama_fasilitas'] ?></li>
-                                                    </ul>
-                                                <?php endforeach ?>
-                                            </td>
-                                            <td class="align-middle"><?= $row['nama'] ?></td>
-                                            <td class="align-middle"><?= substr($row['deskripsi'], 0, 200) . (strlen($row['deskripsi']) > 200 ? '...' : '') ?></td>
-                                            <td class="text-center align-middle">
-                                                <a href="<?= base_url('wisata/edit/' . $row['id_wisata']); ?>" class="btn  btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
-                                                <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_wisata'] ?>"><i class="fas fa-trash"></i></button>
-                                            </td>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="datatable">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>No</th>
+                                            <th>Nama Wisata</th>
+                                            <th>Fasilitas</th>
+                                            <th>Nama Admin</th>
+                                            <th width="400px">Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php endforeach ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1; ?>
+                                        <?php foreach ($wisata as $row) : ?>
+                                            <tr>
+                                                <td class="text-center align-middle"><?= $no++ ?></td>
+                                                <td class="align-middle"><?= $row['nama_wisata'] ?></td>
+                                                <td>
+                                                    <?php foreach ($row['fasilitas'] as $fas) : ?>
+                                                        <ul>
+                                                            <li><?= $fas['nama_fasilitas'] ?></li>
+                                                        </ul>
+                                                    <?php endforeach ?>
+                                                </td>
+                                                <td class="align-middle"><?= $row['nama'] ?></td>
+                                                <td class="align-middle"><?= substr($row['deskripsi'], 0, 200) . (strlen($row['deskripsi']) > 200 ? '...' : '') ?></td>
+                                                <td class="text-center align-middle">
+                                                    <a href="<?= base_url('wisata/edit/' . $row['id_wisata']); ?>" class="btn  btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
+                                                    <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_wisata'] ?>"><i class="fas fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

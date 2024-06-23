@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="<?= base_url('admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('admin/plugins/daterangepicker/daterangepicker.css') ?>">
     <link rel="stylesheet" href="<?= base_url('style.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') ?>">
     <script src="<?= base_url('admin/plugins/jquery/jquery.min.js') ?>"></script>
 </head>
 

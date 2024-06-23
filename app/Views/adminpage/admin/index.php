@@ -78,35 +78,37 @@
                             <h3 class="card-title text-bold">Data Admin </h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-hover" id="datatable">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>No Hp</th>
-                                        <th>Email</th>
-                                        <th>Alamat</th>
-                                        <th>Profile</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($admin as $row) : ?>
-                                        <tr onclick="tampilkan(<?= $row['id_user'] ?>);">
-                                            <td class="text-center"><?= $no++ ?></td>
-                                            <td><?= $row['nama'] ?></td>
-                                            <td><?= $row['no_hp'] ?></td>
-                                            <td><?= $row['email'] ?></td>
-                                            <td><?= $row['alamat'] ?></td>
-                                            <td class="text-center"><img src="<?= (isset($user['profile']) ? base_url('img/profile/' . $user['profile']) : base_url('img/profile/User_Default.png')) ?>" class="user-circle"></td>
-                                            <td class="text-center">
-                                                <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_user'] ?>"><i class="fas fa-trash"></i></button></a>
-                                            </td>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="datatable">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>No Hp</th>
+                                            <th>Email</th>
+                                            <th>Alamat</th>
+                                            <th>Profile</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php endforeach ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1; ?>
+                                        <?php foreach ($admin as $row) : ?>
+                                            <tr onclick="tampilkan(<?= $row['id_user'] ?>);">
+                                                <td class="text-center"><?= $no++ ?></td>
+                                                <td><?= $row['nama'] ?></td>
+                                                <td><?= $row['no_hp'] ?></td>
+                                                <td><?= $row['email'] ?></td>
+                                                <td><?= $row['alamat'] ?></td>
+                                                <td class="text-center"><img src="<?= (isset($user['profile']) ? base_url('img/profile/' . $user['profile']) : base_url('img/profile/User_Default.png')) ?>" class="user-circle"></td>
+                                                <td class="text-center">
+                                                    <button class="btn  btn-danger btn-sm" title="Hapus" data-toggle="modal" data-target="#hapus-data" data-id="<?= $row['id_user'] ?>"><i class="fas fa-trash"></i></button></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

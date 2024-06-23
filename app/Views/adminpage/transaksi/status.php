@@ -26,37 +26,39 @@
                             <h3 class="card-title text-bold">Data Pemesanan </h3>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered table-hover" id="datatable">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>No</th>
-                                        <th>ID Transaksi</th>
-                                        <th>Nama Wisatawan</th>
-                                        <th>Tanggal Transaksi</th>
-                                        <th>Jumlah Tiket</th>
-                                        <th>Total Bayar</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($transaksi as $row) : ?>
-                                        <tr>
-                                            <td class="text-center"><?= $no++ ?></td>
-                                            <td class="text-center"><?= $row['id_transaksi'] ?></td>
-                                            <td><?= $row['nama'] ?></td>
-                                            <td class="text-center"><?= date('d-m-Y', strtotime($row['tgl_transaksi'])) ?></td>
-                                            <td class="text-center"><?= $row['total_tiket'] ?></td>
-                                            <td class="text-center">Rp. <?= number_format($row['total_bayar'], 0, '.', '.') ?></td>
-                                            <td class="text-center <?= ($row['status'] === 'Selesai') ? 'text-success' : 'text-danger' ?>"><?= $row['status'] ?></a></td>
-                                            <td class="text-center">
-                                                <button class="btn  btn-primary btn-sm" title="Detail" data-toggle="modal" data-target="#detail" data-id="<?= $row['id_transaksi'] ?>"><i class="fas fa-info"></i></button></a>
-                                            </td>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="datatable">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>No</th>
+                                            <th>ID Transaksi</th>
+                                            <th>Nama Wisatawan</th>
+                                            <th>Tanggal Transaksi</th>
+                                            <th>Jumlah Tiket</th>
+                                            <th>Total Bayar</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php endforeach ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1; ?>
+                                        <?php foreach ($transaksi as $row) : ?>
+                                            <tr>
+                                                <td class="text-center"><?= $no++ ?></td>
+                                                <td class="text-center"><?= $row['id_transaksi'] ?></td>
+                                                <td><?= $row['nama'] ?></td>
+                                                <td class="text-center"><?= date('d-m-Y', strtotime($row['tgl_transaksi'])) ?></td>
+                                                <td class="text-center"><?= $row['total_tiket'] ?></td>
+                                                <td class="text-center">Rp. <?= number_format($row['total_bayar'], 0, '.', '.') ?></td>
+                                                <td class="text-center <?= ($row['status'] === 'Selesai') ? 'text-success' : 'text-danger' ?>"><?= $row['status'] ?></a></td>
+                                                <td class="text-center">
+                                                    <button class="btn  btn-primary btn-sm" title="Detail" data-toggle="modal" data-target="#detail" data-id="<?= $row['id_transaksi'] ?>"><i class="fas fa-info"></i></button></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

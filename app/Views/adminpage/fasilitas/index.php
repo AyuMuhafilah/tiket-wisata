@@ -146,7 +146,9 @@
             var id = $(event.relatedTarget).data('id');
             document.getElementById('hapus_id').value = id;
         });
-        $('#datatable').DataTable();
+        $('#datatable').DataTable({
+            // responsive: true
+        });
     });
 </script>
 <?= $this->endsection('js') ?>
