@@ -53,4 +53,7 @@ $routes->get('getDetail/(:any)', 'Transaksi::detail/$1', ['filter' => 'otentifik
 // Laporan
 $routes->get('laporan/pengunjung', 'Wisatawan::index', ['filter' => 'otentifikasi']);
 $routes->post('laporan/pengunjung', 'Wisatawan::index', ['filter' => 'otentifikasi']);
-// $routes->get('laporan/penjualan', 'Wisatawan::index', ['filter' => 'otentifikasi']);
+$routes->post('laporan/pengunjung/pdf', 'Wisatawan::pdfPengunjung', ['filter' => 'otentifikasi']);
+$routes->get('laporan/penjualan', 'Transaksi::laporan', ['filter' => 'otentifikasi']);
+$routes->post('laporan/penjualan', 'Transaksi::laporan', ['filter' => 'otentifikasi']);
+$routes->post('laporan/penjualan/pdf', 'Transaksi::pdfPenjualan', ['filter' => 'otentifikasi']);

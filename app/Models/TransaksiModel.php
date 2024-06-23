@@ -41,11 +41,28 @@ class TransaksiModel extends Model
 
     public function getPengunjung($id_wisata, $mulai, $selesai)
     {
-        return $this->select('transaksi.*, nama, no_hp, email')
+        $pengunjung = $this->select('transaksi.*, nama, no_hp, email')
             ->join('user', 'user.id_user = transaksi.id_wisatawan')
             ->where('id_wisata', $id_wisata)
             ->where('tgl_transaksi >=', $mulai)
             ->where('tgl_transaksi <=', $selesai)
+            ->orderBy('tgl_transaksi', 'ASC')
             ->findAll();
+
+        $totalJumlahAnggota = $this->selectSum('total_tiket')
+            ->where('id_wisata', $id_wisata)
+            ->where('tgl_transaksi >=', $mulai)
+            ->where('tgl_transaksi <=', $selesai)
+            ->first();
+        $totalPenjualan = $this->selectSum('total_bayar')
+            ->where('id_wisata', $id_wisata)
+            ->where('tgl_transaksi >=', $mulai)
+            ->where('tgl_transaksi <=', $selesai)
+            ->first();
+        return [
+            'pengunjung'      => $pengunjung,
+            'total_anggota'   => $totalJumlahAnggota['total_tiket'],
+            'total_penjualan' => $totalPenjualan['total_bayar'],
+        ];
     }
 }

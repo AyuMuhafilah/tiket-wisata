@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\DetailTransaksiModel;
 use App\Models\TransaksiModel;
 use App\Models\WisataModel;
-use CodeIgniter\HTTP\ResponseInterface;
+use App\Libraries\Pdf;
 
 class Transaksi extends BaseController
 {
@@ -65,5 +65,50 @@ class Transaksi extends BaseController
             'detail' => $detail,
         ];
         return $this->response->setJSON($data);
+    }
+
+    public function laporan()
+    {
+        $data = $this->home->getData();
+        $tgl = $this->request->getPost('tanggal');
+        if (isset($tgl)) {
+            $tanggalArray = explode(' - ', $tgl);
+            $mulai = $tanggalArray[0];
+            $selesai = $tanggalArray[1];
+            $data['tgl'] = $tgl;
+        } else {
+            $mulai = date('Y-m-d');
+            $selesai = date('Y-m-d');
+            $data['tgl'] = $mulai . ' - ' . $selesai;
+        }
+        $getData = $this->transaksi->getPengunjung($data['admin']['id_wisata'], $mulai, $selesai);
+        $data['total_tiket'] = $getData['total_anggota'];
+        $data['total'] = $getData['total_penjualan'];
+        $data['transaksi'] = $getData['pengunjung'];
+        return view('adminpage/laporan/penjualan', $data);
+    }
+
+    public function pdfPenjualan()
+    {
+        $pdf = new Pdf();
+        $file_pdf = 'Laporan Pengunjung';
+        $paper = 'A4';
+        $orientation = "landscape";
+
+        $data = $this->home->getData();
+        $tgl = $this->request->getPost('tgl');
+        $tanggalArray = explode(' - ', $tgl);
+        $mulai = $tanggalArray[0];
+        $selesai = $tanggalArray[1];
+        $getData = $this->transaksi->getPengunjung($data['admin']['id_wisata'], $mulai, $selesai);
+
+        $data['mulai'] = $mulai;
+        $data['selesai'] = $selesai;
+        $data['total_tiket'] = $getData['total_anggota'];
+        $data['total'] = $getData['total_penjualan'];
+        $data['transaksi'] = $getData['pengunjung'];
+        $html = view('adminpage/laporan/lap_penjualan', $data);
+
+        $pdf->generate($html, $file_pdf, $paper, $orientation, true);
     }
 }

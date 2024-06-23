@@ -4,16 +4,15 @@
 !/writable/.htaccess
 !/writable/uploads/
 !/writable/cache/
-!/writable/logs/
 
 # Ignore environment-specific files
 .env
+writable/logs/*
 
 # Ignore Composer dependency directories
 /vendor/*
 !/vendor/autoload.php
 !/vendor/composer/
-
 
 # Ignore OS-generated files
 .DS_Store
@@ -21,4 +20,3 @@ Thumbs.db
 
 # Ignore PHPUnit test result cache
 .phpunit.result.cache
-
