@@ -1,0 +1,159 @@
+INFO - 2024-05-21 06:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:34:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\Login::$session is deprecated in APPPATH\Controllers\Login.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:34:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Login::$session is deprecated in APPPATH\Controllers\Login.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:34:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:34:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "adminpage/wisata/create.php"
+[Method: GET, Route: wisata/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminpage/wisata/create.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('adminpage/wisata/create', [], true)
+ 3 APPPATH\Controllers\Wisata.php(15): view('adminpage/wisata/create')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->create()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:34:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:35:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:35:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$session is deprecated in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:36:55 --> ErrorException: Undefined variable $user
+[Method: GET, Route: wisata]
+in APPPATH\Views\temp_adminpage\sidebar.php on line 4.
+ 1 APPPATH\Views\temp_adminpage\sidebar.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\temp_adminpage\\sidebar.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\temp_adminpage\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('temp_adminpage/sidebar', null, true)
+ 5 APPPATH\Views\adminpage\wisata\index.php(2): CodeIgniter\View\View->include('temp_adminpage/sidebar')
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\adminpage\\wisata\\index.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('adminpage/wisata/index', [], true)
+ 9 APPPATH\Controllers\Wisata.php(11): view('adminpage/wisata/index')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:37:50 --> ErrorException: Undefined property: App\Controllers\Wisata::$session
+[Method: GET, Route: wisata]
+in APPPATH\Controllers\Wisata.php on line 11.
+ 1 APPPATH\Controllers\Wisata.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Wisata::$session', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Controllers\\Wisata.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:37:59 --> ErrorException: Undefined property: App\Controllers\Wisata::$session
+[Method: GET, Route: wisata]
+in APPPATH\Controllers\Wisata.php on line 11.
+ 1 APPPATH\Controllers\Wisata.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Wisata::$session', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Controllers\\Wisata.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:38:00 --> ErrorException: Undefined property: App\Controllers\Wisata::$session
+[Method: GET, Route: wisata]
+in APPPATH\Controllers\Wisata.php on line 11.
+ 1 APPPATH\Controllers\Wisata.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Wisata::$session', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Controllers\\Wisata.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:38:00 --> ErrorException: Undefined property: App\Controllers\Wisata::$session
+[Method: GET, Route: wisata]
+in APPPATH\Controllers\Wisata.php on line 11.
+ 1 APPPATH\Controllers\Wisata.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Wisata::$session', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Controllers\\Wisata.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-21 06:38:00 --> ErrorException: Undefined property: App\Controllers\Wisata::$session
+[Method: GET, Route: wisata]
+in APPPATH\Controllers\Wisata.php on line 11.
+ 1 APPPATH\Controllers\Wisata.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Wisata::$session', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Controllers\\Wisata.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Wisata->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Wisata))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:38:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Wisata::$session is deprecated in APPPATH\Controllers\Wisata.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Wisata->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-21 06:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-21 06:38:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Wisata::$session is deprecated in APPPATH\Controllers\Wisata.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Wisata->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')

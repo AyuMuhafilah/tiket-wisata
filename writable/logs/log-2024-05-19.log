@@ -1,0 +1,1494 @@
+CRITICAL - 2024-05-19 07:02:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('header', null, true)
+ 3 APPPATH\Views\login\login.php(1): CodeIgniter\View\View->include('header')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/login', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('login/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->homepage()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 07:28:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(50) NULL,
+	`alamat` TEXT NULL,
+	`profile` VARCHAR(100) NULL,
+	`role` ENUM('s...' at line 7 in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Database\Migrations\2024-05-18-142346_User.php(65): CodeIgniter\Database\Forge->createTable('user')
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MigrationRunner.php(867): App\Database\Migrations\User->up()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-05-19 07:28:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(50) NULL,
+	`alamat` TEXT NULL,
+	`profile` VARCHAR(100) NULL,
+	`role` ENUM('s...' at line 7 in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Database\Migrations\2024-05-18-142346_User.php(65): CodeIgniter\Database\Forge->createTable('user')
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MigrationRunner.php(867): App\Database\Migrations\User->up()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2024-05-19 13:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 13:49:05 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: register]
+in APPPATH\Views\login\register.php on line 26.
+ 1 APPPATH\Views\login\register.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/register', [], true)
+ 5 APPPATH\Controllers\Register.php(13): view('login/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 13:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 13:50:17 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: register]
+in APPPATH\Views\login\register.php on line 26.
+ 1 APPPATH\Views\login\register.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/register', [], true)
+ 5 APPPATH\Controllers\Register.php(13): view('login/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 13:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 13:54:43 --> BadMethodCallException: Call to undefined method App\Models\UserModel::getErrors
+[Method: POST, Route: register/store]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\Register.php(31): CodeIgniter\Model->__call('getErrors', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 13:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 14:00:08 --> Error: Call to a member function getErrors() on null
+[Method: POST, Route: register/store]
+in APPPATH\Controllers\Register.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 14:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 14:04:30 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: register]
+in APPPATH\Views\login\register.php on line 3.
+ 1 APPPATH\Views\login\register.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/register', [], true)
+ 5 APPPATH\Controllers\Register.php(13): view('login/register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 14:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 14:07:07 --> ErrorException: Undefined array key "password"
+[Method: GET, Route: register]
+in APPPATH\Views\login\register.php on line 15.
+ 1 APPPATH\Views\login\register.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password"', 'C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\app\\Views\\login\\register.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('login/register', [], true)
+ 5 APPPATH\Controllers\Register.php(16): view('login/register', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Register->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 14:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:44:03 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:44:04 --> TypeError: CodeIgniter\Database\BaseBuilder::getOperatorFromWhereKey(): Argument #1 ($whereKey) must be of type string, int given, called in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php on line 760
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3453.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(760): CodeIgniter\Database\BaseBuilder->getOperatorFromWhereKey(0)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(701): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', [...], null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(919): CodeIgniter\Database\BaseBuilder->where([...])
+ 4 APPPATH\Models\UserModel.php(60): CodeIgniter\Model->__call('where', [...])
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$viBuRav8J5FLZao5NkPelOcGWGEsgbLJNo4J4J2ESyViAtPFZuxRa')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:48:32 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:48:32 --> mysqli_sql_exception: Unknown column 'user.deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$AxvILzga...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:48:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:48:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:48:32 --> [Caused by] mysqli_sql_exception: Unknown column 'user.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$AxvILzgaYSaYAz5Eiwif6.JpcKzGOWYzvbBiMXIU87AmibsO7uh8.')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:49:30 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:49:30 --> BadMethodCallException: Call to undefined method App\Models\UserModel::whereNull
+[Method: POST, Route: login]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Models\UserModel.php(62): CodeIgniter\Model->__call('whereNull', [...])
+ 2 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$BJ6wFma4RlOf2ijJDFQQueWWxHam93v3CKksUGqfVCxm8IG86sPEq')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:51:07 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:51:07 --> mysqli_sql_exception: Unknown column 'user.deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$6mYqCpqi...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:51:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:51:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:51:07 --> [Caused by] mysqli_sql_exception: Unknown column 'user.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW\'
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(62): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$6mYqCpqiC2eMzut8U5.s8.Y8AvlSKgsqVe9r9V69xV1SYB/AJM9RW')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:52:25 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:52:25 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$OAaCLJAl...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:52:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:52:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:52:25 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$OAaCLJAlzTUHSyPGM1kQ2ehXV3u6ePG9Um5NS.IK//NjyTi9XNR5K')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:52:29 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:52:29 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$WQ6Hnqi6...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:52:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:52:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:52:29 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$WQ6Hnqi6qOwk.KIvx2hTJeUs5g0fijAkqhsl9EptHzAraDue/Z.Za')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:55:33 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:55:33 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$B6SQvRkC...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:55:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:55:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:55:33 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$B6SQvRkCpNbvuLhYdK5qi.zmitI6C1S.Zda3oD7ussfh/T.P4.ifu')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:55:37 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:55:37 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$ecmna3mC...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:55:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:55:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:55:37 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ecmna3mCWV/eY1HEKlWNv.asx3WmnKGh6I3q.j3wdsWmai0D8pO0S')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 15:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 15:56:02 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 15:56:02 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$lurcu2xM...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 15:56:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:56:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 15:56:02 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$lurcu2xMRPLDd0HCn.89TexGpVhVeWds7Y5Of5zt4g91K/2Czerz6')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 16:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 16:02:25 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 16:02:26 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$ykenq2PX...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 16:02:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 16:02:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 16:02:26 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$ykenq2PX3O..Q.WUT/rdWeHa74pgIpRmQYY3/DBlYkUyZWsgkexV6')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 16:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 16:03:13 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+ERROR - 2024-05-19 16:03:13 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+#7 C:\APK\xampp-8.2\htdocs\SafeToTrip\app\Controllers\Login.php(26): App\Models\UserModel->getUser(NULL, '$2y$10$L5zIyJFD...')
+#8 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(933): App\Controllers\Login->login()
+#9 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\APK\xampp-8.2\htdocs\SafeToTrip\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\APK\xampp-8.2\htdocs\SafeToTrip\system\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8....')
+#15 {main}
+CRITICAL - 2024-05-19 16:03:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 16:03:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+CRITICAL - 2024-05-19 16:03:13 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = \'$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a\'
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` IS NULL
+AND `password` = :password:
+AND deleted_at IS NULL
+AND `user`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(63): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(26): App\Models\UserModel->getUser(null, '$2y$10$L5zIyJFDdx1Og8ElL8Czb.9N28KaesbQYTjdrE4Jh58lqIqqz/d8a')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 23:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 23:16:15 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 23:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 23:16:57 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 23:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 23:17:29 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 23:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 23:17:54 --> [DEPRECATED] password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
+ 1 APPPATH\Controllers\Login.php(24): password_hash(Object(SensitiveParameterValue), '2y')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
+INFO - 2024-05-19 23:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 23:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-19 23:56:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Login::$session is deprecated in APPPATH\Controllers\Login.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\APK\\xampp-8.2\\htdocs\\SafeToTrip\\public\\index.php')
