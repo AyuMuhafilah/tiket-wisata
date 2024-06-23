@@ -4,12 +4,12 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Payment extends Migration
+class Bank extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_payment'         => [
+            'id_bank'         => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'auto_increment' => true,
@@ -30,13 +30,13 @@ class Payment extends Migration
                 'null'       => false,
             ],
         ]);
-        $this->forge->addKey('id_payment', true);
+        $this->forge->addKey('id_bank', true);
         $this->forge->addForeignKey('id_admin', 'user', 'id_user', 'CASECADE', 'CASECADE');
-        $this->forge->createTable('payment');
+        $this->forge->createTable('bank');
     }
 
     public function down()
     {
-        $this->forge->dropTable('payment');
+        $this->forge->dropTable('bank');
     }
 }
