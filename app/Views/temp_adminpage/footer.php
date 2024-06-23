@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong class="text-center">Copyright &copy; <a href="https://www.instagram.com/ayymhflh10/">Ayu Muhafilah</a> <?= date('Y') ?>.</strong>
+    <strong class="text-center">Copyright &copy; <a href="https://www.instagram.com/ayymhflh10/">Ayu Muhafilah</a> TINFC 2022 02</strong>
 </footer>
 </div>
 
