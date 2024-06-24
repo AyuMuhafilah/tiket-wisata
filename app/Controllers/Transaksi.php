@@ -107,6 +107,56 @@ class Transaksi extends BaseController
         $data['total_tiket'] = $getData['total_anggota'];
         $data['total'] = $getData['total_penjualan'];
         $data['transaksi'] = $getData['pengunjung'];
+        $data['nama_wisata'] = $data['admin']['nama_wisata'];
+        $html = view('adminpage/laporan/lap_penjualan', $data);
+
+        $pdf->generate($html, $file_pdf, $paper, $orientation, true);
+    }
+
+    public function penjualan($id)
+    {
+        $data = $this->home->getData();
+        $tgl = $this->request->getPost('tanggal');
+        if (isset($tgl)) {
+            $tanggalArray = explode(' - ', $tgl);
+            $mulai = $tanggalArray[0];
+            $selesai = $tanggalArray[1];
+            $data['tgl'] = $tgl;
+        } else {
+            $mulai = date('Y-m-d');
+            $selesai = date('Y-m-d');
+            $data['tgl'] = $mulai . ' - ' . $selesai;
+        }
+        $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
+        $data['id'] = $id;
+        $data['total_tiket'] = $getData['total_anggota'];
+        $data['total'] = $getData['total_penjualan'];
+        $data['transaksi'] = $getData['pengunjung'];
+        return view('adminpage/laporan/penjualan', $data);
+    }
+
+    public function pdfPenjualanwisata($id)
+    {
+        $pdf = new Pdf();
+        $file_pdf = 'Laporan Penjualan';
+        $paper = 'A4';
+        $orientation = "landscape";
+
+        $tgl = $this->request->getPost('tgl');
+        $tanggalArray = explode(' - ', $tgl);
+        $mulai = $tanggalArray[0];
+        $selesai = $tanggalArray[1];
+        $wisata = $this->wisata->where('id_wisata', $id)->first();
+        $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
+
+        $data = [
+            'mulai'       => $mulai,
+            'selesai'     => $selesai,
+            'total_tiket' => $getData['total_anggota'],
+            'total'       => $getData['total_penjualan'],
+            'transaksi'   => $getData['pengunjung'],
+            'nama_wisata' => $wisata['nama_wisata'],
+        ];
         $html = view('adminpage/laporan/lap_penjualan', $data);
 
         $pdf->generate($html, $file_pdf, $paper, $orientation, true);

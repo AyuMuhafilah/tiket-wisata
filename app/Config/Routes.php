@@ -43,6 +43,12 @@ $routes->post('harga/store', 'Harga::store', ['filter' => 'otentifikasi']);
 $routes->post('harga/update/', 'Harga::update', ['filter' => 'otentifikasi']);
 $routes->post('harga/delete/', 'Harga::delete', ['filter' => 'otentifikasi']);
 
+// Bank
+$routes->get('bank', 'Bank::index', ['filter' => 'otentifikasi']);
+$routes->post('bank/store', 'Bank::store', ['filter' => 'otentifikasi']);
+$routes->post('bank/update/', 'Bank::update', ['filter' => 'otentifikasi']);
+$routes->post('bank/delete/', 'Bank::delete', ['filter' => 'otentifikasi']);
+
 // Transaksi
 $routes->get('transaksi', 'Transaksi::index', ['filter' => 'otentifikasi']);
 $routes->post('transaksi/tolak', 'Transaksi::tolak', ['filter' => 'otentifikasi']);
@@ -57,3 +63,14 @@ $routes->post('laporan/pengunjung/pdf', 'Wisatawan::pdfPengunjung', ['filter' =>
 $routes->get('laporan/penjualan', 'Transaksi::laporan', ['filter' => 'otentifikasi']);
 $routes->post('laporan/penjualan', 'Transaksi::laporan', ['filter' => 'otentifikasi']);
 $routes->post('laporan/penjualan/pdf', 'Transaksi::pdfPenjualan', ['filter' => 'otentifikasi']);
+
+// Super User
+$routes->get('laporan-pengunjung', 'Wisatawan::wisata', ['filter' => 'otentifikasi']);
+$routes->get('laporan-pengunjung-wisata/(:num)', 'Wisatawan::pengunjung/$1', ['filter' => 'otentifikasi']);
+$routes->post('laporan-pengunjung-wisata/(:num)', 'Wisatawan::pengunjung/$1', ['filter' => 'otentifikasi']);
+$routes->post('laporan-pengunjung-pdf/(:num)', 'Wisatawan::pdfPengunjungwisata/$1', ['filter' => 'otentifikasi']);
+
+$routes->get('laporan-penjualan', 'Wisatawan::allwisata', ['filter' => 'otentifikasi']);
+$routes->get('laporan-penjualan-wisata/(:num)', 'Transaksi::penjualan/$1', ['filter' => 'otentifikasi']);
+$routes->post('laporan-penjualan-wisata/(:num)', 'Transaksi::penjualan/$1', ['filter' => 'otentifikasi']);
+$routes->post('laporan-penjualan-pdf/(:num)', 'Transaksi::pdfPenjualanwisata/$1', ['filter' => 'otentifikasi']);

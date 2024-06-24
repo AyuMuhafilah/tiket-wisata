@@ -26,7 +26,8 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="col-sm-12">
-                                        <form action="<?= base_url('laporan/penjualan') ?>" method="POST">
+                                        <?php ($user['role'] === 'admin') ? $url = 'laporan/penjualan' : $url = 'laporan-penjualan-wisata/' . $id; ?>
+                                        <form action="<?= base_url($url) ?>" method="POST">
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-sm-3">
@@ -50,7 +51,8 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <?php if (!empty($transaksi)) : ?>
-                                        <form action="<?= base_url('laporan/penjualan/pdf') ?>" method="POST" target="_blank">
+                                        <?php ($user['role'] === 'admin') ? $url = 'laporan/penjualan/pdf' : $url = 'laporan-penjualan-pdf/' . $id; ?>
+                                        <form action="<?= base_url($url) ?>" method="POST" target="_blank">
                                             <input type="hidden" name="tgl" value="<?= $tgl ?>">
                                             <button type="submit" class="btn btn-danger float-right"><i class="fas fa-file-pdf mr-3"></i>PDF</button>
                                         </form>

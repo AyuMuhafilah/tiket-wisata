@@ -57,8 +57,70 @@ class Wisatawan extends BaseController
         $data['selesai'] = $selesai;
         $data['total'] = $getData['total_anggota'];
         $data['pengunjung'] = $getData['pengunjung'];
+        $data['nama_wisata'] = $data['admin']['nama_wisata'];
         $html = view('adminpage/laporan/lap_pengunjung', $data);
 
         $pdf->generate($html, $file_pdf, $paper, $orientation, true);
+    }
+
+    public function wisata()
+    {
+        $data = $this->home->getData();
+        $data['wisata'] = $this->wisata->getJoinWisata();
+        return view('adminpage/laporan/index_pengunjung', $data);
+    }
+
+    public function pengunjung($id)
+    {
+        $data = $this->home->getData();
+        $tgl = $this->request->getPost('tanggal');
+        if (isset($tgl)) {
+            $tanggalArray = explode(' - ', $tgl);
+            $mulai = $tanggalArray[0];
+            $selesai = $tanggalArray[1];
+            $data['tgl'] = $tgl;
+        } else {
+            $mulai = date('Y-m-d');
+            $selesai = date('Y-m-d');
+            $data['tgl'] = $mulai . ' - ' . $selesai;
+        }
+        $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
+        $data['id'] = $id;
+        $data['total'] = $getData['total_anggota'];
+        $data['pengunjung'] = $getData['pengunjung'];
+        return view('adminpage/laporan/pengunjung', $data);
+    }
+
+    public function pdfPengunjungWisata($id)
+    {
+        $wisata = $this->wisata->where('id_wisata', $id)->first();
+        $pdf = new Pdf();
+        $file_pdf = 'Laporan Pengunjung';
+        $paper = 'A4';
+        $orientation = "landscape";
+
+        $tgl = $this->request->getPost('tgl');
+        $tanggalArray = explode(' - ', $tgl);
+        $mulai = $tanggalArray[0];
+        $selesai = $tanggalArray[1];
+        $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
+
+        $data = [
+            'mulai'        => $mulai,
+            'selesai'      => $selesai,
+            'total'        => $getData['total_anggota'],
+            'pengunjung'   => $getData['pengunjung'],
+            'nama_wisata'  => $wisata['nama_wisata']
+        ];
+        $html = view('adminpage/laporan/lap_pengunjung', $data);
+
+        $pdf->generate($html, $file_pdf, $paper, $orientation, true);
+    }
+
+    public function allwisata()
+    {
+        $data = $this->home->getData();
+        $data['wisata'] = $this->wisata->getJoinWisata();
+        return view('adminpage/laporan/index_penjualan', $data);
     }
 }

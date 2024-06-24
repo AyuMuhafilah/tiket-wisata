@@ -26,6 +26,19 @@
                             <p> Data Wisata </p>
                         </a>
                     </li>
+                    <li class="nav-header ml-2">LAPORAN</li>
+                    <li class="nav-item ml-2">
+                        <a href="<?= base_url('laporan-pengunjung') ?>" class="nav-link">
+                            <i class="fas fa-file-pdf nav-icon"></i>
+                            <p>Laporan Pengunjung</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a href="<?= base_url('laporan-penjualan') ?>" class="nav-link">
+                            <i class="fas fa-file-pdf nav-icon"></i>
+                            <p>Laporan Penjualan</p>
+                        </a>
+                    </li>
                 <?php endif ?>
                 <?php if ($user['role'] == 'admin') : ?>
                     <li class="nav-item ml-2">
@@ -38,6 +51,12 @@
                         <a href="<?= base_url('harga') ?>" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
                             <p> Data Harga Tiket </p>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a href="<?= base_url('bank') ?>" class="nav-link">
+                            <i class="nav-icon fas fa-money-check-alt"></i>
+                            <p> Data Bank </p>
                         </a>
                     </li>
                     <li class="nav-header ml-2">TRANSAKSI</li>
@@ -53,20 +72,20 @@
                             <p>Status Pemesanan</p>
                         </a>
                     </li>
+                    <li class="nav-header ml-2">LAPORAN</li>
+                    <li class="nav-item ml-2">
+                        <a href="<?= base_url('laporan/pengunjung') ?>" class="nav-link">
+                            <i class="fas fa-file-pdf nav-icon"></i>
+                            <p>Laporan Pengunjung</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <a href="<?= base_url('laporan/penjualan') ?>" class="nav-link">
+                            <i class="fas fa-file-pdf nav-icon"></i>
+                            <p>Laporan Penjualan</p>
+                        </a>
+                    </li>
                 <?php endif ?>
-                <li class="nav-header ml-2">LAPORAN</li>
-                <li class="nav-item ml-2">
-                    <a href="<?= base_url('laporan/pengunjung') ?>" class="nav-link">
-                        <i class="fas fa-file-pdf nav-icon"></i>
-                        <p>Laporan Pengunjung</p>
-                    </a>
-                </li>
-                <li class="nav-item ml-2">
-                    <a href="<?= base_url('laporan/penjualan') ?>" class="nav-link">
-                        <i class="fas fa-file-pdf nav-icon"></i>
-                        <p>Laporan Penjualan</p>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a href="<?= base_url('logout') ?>" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon"></i>

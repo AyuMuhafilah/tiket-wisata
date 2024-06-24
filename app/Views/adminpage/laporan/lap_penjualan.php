@@ -39,7 +39,7 @@
 
 <body>
     <h2 class="text-center">Laporan Penjualan Tiket</h2>
-    <h2 class="text-center">Wisata <?= $admin['nama_wisata'] ?></h2>
+    <h2 class="text-center">Wisata <?= $nama_wisata ?></h2>
     <hr>
     <p>Berikut adalah Laporan Penjualan dari <?= date('d-m-Y', strtotime($mulai)) . ' sampai ' . date('d-m-Y', strtotime($selesai)) ?></p>
     <table>
