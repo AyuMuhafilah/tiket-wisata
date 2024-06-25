@@ -80,4 +80,15 @@ class UserModel extends Model
             ->where("id_user NOT IN ($subquery)", null, false)
             ->findAll();
     }
+
+    public function getAllAdmin()
+    {
+        return $this->where('role', 'admin')
+            ->findAll();
+    }
+    public function getAllWisatawan()
+    {
+        return $this->where('role', 'wisatawan')
+            ->findAll();
+    }
 }

@@ -77,7 +77,7 @@ class Transaksi extends Migration
             ],
         ]);
         $this->forge->addKey('id_detail', true);
-        $this->forge->addForeignKey('id_transaksi', 'transaksi', 'id_transaksi', 'CASECADE', 'CASECADE');
+        $this->forge->addForeignKey('id_transaksi', 'transaksi', 'id_transaksi', 'CASCADE', 'CASCADE');
         $this->forge->createTable('detail_transaksi');
     }
 

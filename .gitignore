@@ -1,22 +1,25 @@
-# Ignore system and log files
-/writable/*
-!/writable/index.html
-!/writable/.htaccess
-!/writable/uploads/
-!/writable/cache/
-
-# Ignore environment-specific files
+# Ignore .env file
 .env
+
+# Ignore cache and logs
+writable/cache/*
 writable/logs/*
+writable/debugbar/*
+writable/session/*
+writable/etiket/*
 
-# Ignore Composer dependency directories
-/vendor/*
-!/vendor/autoload.php
-!/vendor/composer/
+# Ignore vendor and composer lock file
+vendor/
+composer.lock
 
-# Ignore OS-generated files
+public/admin/*
+public/img/*
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+
+# Ignore other OS-specific files
 .DS_Store
 Thumbs.db
-
-# Ignore PHPUnit test result cache
-.phpunit.result.cache

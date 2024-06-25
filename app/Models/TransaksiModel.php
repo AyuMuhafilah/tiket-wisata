@@ -74,4 +74,17 @@ class TransaksiModel extends Model
             ->orderBy('tgl_transaksi', 'DESC')
             ->findAll();
     }
+
+    public function  getAllTransaksi()
+    {
+        return $this->selectSum('total_tiket')
+            ->first();
+    }
+
+    public function  getJmlTransaksi($id_wisata)
+    {
+        return $this->selectSum('total_tiket')
+            ->where('id_wisata', $id_wisata)
+            ->first();
+    }
 }

@@ -40,7 +40,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <!-- <a class="dropdown-item" href="<?= base_url('profile') ?>">Profile</a> -->
-                                    <?php if ($user['role'] === 'admin') : ?>
+                                    <?php if ($user['role'] !== 'wisatawan') : ?>
                                         <a class="dropdown-item" href="<?= base_url('/dashboard') ?>">Halaman Admin</a>
                                     <?php endif ?>
                                     <a class="dropdown-item" href="<?= base_url('history/' . $user['id_user']) ?>">History Pemesanan</a>

@@ -22,7 +22,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>150</h3>
+                            <h3><?= $jml_admin ?></h3>
                             <p>Admin Wisata</p>
                         </div>
                         <div class="icon">
@@ -34,7 +34,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>53<sup style="font-size: 20px"></sup></h3>
+                            <h3><?= $jml_wisata ?><sup style="font-size: 20px"></sup></h3>
                             <p>Tempat Wisata</p>
                         </div>
                         <div class="icon">
@@ -46,7 +46,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>444</h3>
+                            <h3><?= $jml_wisatawan ?></h3>
                             <p>Wisatawan</p>
                         </div>
                         <div class="icon">
@@ -58,7 +58,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>650</h3>
+                            <h3><?= (isset($jml_tiket_terjual)) ?: 0 ?></h3>
                             <p>Tiket Terjual</p>
                         </div>
                         <div class="icon">

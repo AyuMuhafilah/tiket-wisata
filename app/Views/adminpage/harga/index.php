@@ -101,8 +101,8 @@
                     <div class="form-group">
                         <label>Jenis Tiket</label>
                         <select name="jenis_tiket" class="form-control">
-                            <option value="dewasa">Dewasa</option>
-                            <option value="anak-anak">Anak - Anak</option>
+                            <option value="Dewasa">Dewasa</option>
+                            <option value="Anak - Anak">Anak - Anak</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -141,8 +141,8 @@
                     <div class="form-group">
                         <label>Jenis Tiket</label>
                         <select name="jenis_tiket" class="form-control" id="edit_jenis">
-                            <option value="dewasa">Dewasa</option>
-                            <option value="anak-anak">Anak - Anak</option>
+                            <option value="Dewasa">Dewasa</option>
+                            <option value="Anak - Anak">Anak - Anak</option>
                         </select>
                     </div>
                     <div class="form-group">

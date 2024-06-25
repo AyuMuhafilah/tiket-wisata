@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\FasilitasModel;
 use App\Models\HargaTiketModel;
 use App\Models\TransaksiModel;
+use App\Models\UserModel;
 use App\Models\WisataModel;
 
 class Home extends BaseController
@@ -12,6 +13,7 @@ class Home extends BaseController
     public function __construct()
     {
         $this->session   = session();
+        $this->user    = new UserModel();
         $this->wisata    = new WisataModel();
         $this->fasilitas = new FasilitasModel();
         $this->transaksi = new TransaksiModel();
@@ -56,6 +58,15 @@ class Home extends BaseController
     public function adminpage()
     {
         $data = $this->getData();
+        $data['jml_admin'] = count($this->user->getAllAdmin());
+        $data['jml_wisata'] = count($this->wisata->getJoinWisata());
+        $data['jml_wisatawan'] = count($this->user->getAllWisatawan());
+        if ($data['user']['role'] === 'admin') {
+            $data['jml_tiket_terjual'] = $this->transaksi->getJmlTransaksi($data['admin']['id_wisata'])['total_tiket'];
+        } else {
+            $data['jml_tiket_terjual'] = $this->transaksi->getJmlTransaksi()['total_tiket'];
+        }
+        // dd($data);
         return view('adminpage/index', $data);
     }
 
@@ -96,7 +107,6 @@ class Home extends BaseController
     {
         $data = $this->getData();
         $data['history'] = $this->transaksi->getHistoryTransaksi($id_user);
-        // dd($data);
         return view('homepage/history', $data);
     }
 }
