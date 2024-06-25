@@ -79,9 +79,7 @@
                             <option value="BNI">BNI</option>
                             <option value="BCA">BCA</option>
                             <option value="BSI">BSI</option>
-                            <option value="BTN">BTN</option>
                             <option value="MANDIRI">MANDIRI</option>
-                            <option value="CIMB NIAGA">CIMB NIAGA</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -117,9 +115,7 @@
                             <option value="BNI">BNI</option>
                             <option value="BCA">BCA</option>
                             <option value="BSI">BSI</option>
-                            <option value="BTN">BTN</option>
                             <option value="MANDIRI">MANDIRI</option>
-                            <option value="CIMB NIAGA">CIMB NIAGA</option>
                         </select>
                     </div>
                     <div class="form-group">

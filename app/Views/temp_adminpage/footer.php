@@ -27,7 +27,7 @@
         showToast(toastData.icon, toastData.title);
     <?php endif; ?>
 
-    function formatRupiah(angka, prefix) {
+    function formatRupiah(angka) {
         var numberString = angka.toString(),
             sisa = numberString.length % 3,
             rupiah = numberString.substr(0, sisa),

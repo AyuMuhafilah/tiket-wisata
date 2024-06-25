@@ -105,7 +105,7 @@
 <!-- About End -->
 
 
-<!-- Room Start -->
+<!-- Wisata Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -131,11 +131,6 @@
                                     <small class="fa fa-star text-primary"></small>
                                 </div>
                             </div>
-                            <!-- <div class="d-flex mb-3">
-                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
-                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
-                            </div> -->
                             <p class="text-body mb-3">
                                 <td class="align-middle"><?= substr($ws['deskripsi'], 0, 100) . (strlen($ws['deskripsi']) > 100 ? '...' : '') ?></td>
                             </p>
@@ -215,28 +210,37 @@
 
 <div class="modal fade" id="detail-tiket" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
-        <div class="modal-content">
+        <div class="modal-content p-3">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Pesan Tiket</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Wisata</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="<?= base_url('pesan-tiket') ?>" method="POST">
-                <?= csrf_field() ?>
-                <div class="modal-body">
-
+            <div class="modal-body">
+                <h5 class="text-center" id="detail_nama"></h5>
+                <div class="text-center mt-4 mb-4">
+                    <img src="" class="img-fluid" width="467px" id="detail_gambar">
                 </div>
-                <div class="modal-footer justify-content-between">
-                    <div class="row col-sm-12">
-                        <div class="col-sm-7">
-                            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Batal</button>
-                        </div>
-                        <div class="col-sm-5">
-                            <button type="button" id="add-ticket" class="btn btn-success text-white btn-sm">Tambah</button>
-                            <button type="submit" class="btn btn-info text-white btn-sm float-end">Pesan</button>
+                <div id="detail_deskripsi">
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-8">
+                        <h6 id="judul_fasilitas"></h6>
+                        <div class="row" id="detail_fasilitas">
                         </div>
                     </div>
+                    <div class="col-sm-4">
+                        <h6 id="judul_harga"></h6>
+                        <table class="table table-bordered" id="detail_harga">
+                            <thead>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </form>
+                <div class="row detail-bank" id="detail_bank">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -304,6 +308,68 @@
             $('#ticket-container').find('.ticket-group').remove();
             $('#add-ticket').show();
         });
+
+        $('#detail-tiket').on('shown.bs.modal', function(event) {
+            var button = $(event.relatedTarget);
+            var id = button.data('id');
+
+            $.ajax({
+                url: '<?= base_url('getDetailWisata/') ?>' + id,
+                method: 'GET',
+                success: function(response) {
+                    txtSrc = "<?= base_url('img/wisata/') ?>" + response.gambar;
+                    document.getElementById('detail_nama').textContent = response.nama_wisata;
+                    document.getElementById('detail_gambar').src = txtSrc;
+                    document.getElementById('detail_deskripsi').textContent = response.deskripsi;
+                    document.getElementById('judul_fasilitas').textContent = "Fasilitas";
+                    document.getElementById('judul_harga').textContent = "Harga";
+
+                    let fasilitasHtml = '';
+                    response.fasilitas.forEach(function(fasilitas) {
+                        fasilitasHtml += '<div class="col-sm-6">' +
+                            '<div class="facility-box">' +
+                            '<div class="color-box"></div>' +
+                            '<div class="facility-text">' + fasilitas.nama_fasilitas + '</div>' +
+                            '</div>' +
+                            '</div>';
+                    });
+                    $('#detail_fasilitas').html(fasilitasHtml);
+
+                    var hargaHtml = '<thead><tr><th>Jenis</th><th>Harga</th></tr></thead><tbody>';
+                    response.harga.forEach(function(harga) {
+                        hargaHtml += '<tr>';
+                        hargaHtml += '<td>' + harga.jenis_tiket + '</td>';
+                        hargaHtml += '<td>' + formatRupiah(harga.harga) + '</td>';
+                        hargaHtml += '</tr>';
+                    });
+                    hargaHtml += '</tbody>';
+                    $('#detail_harga').html(hargaHtml);
+
+                    var bankHtml = '';
+                    response.bank.forEach(function(bank) {
+                        bankHtml += '<div class="col-sm-2 text-center">' +
+                            '<img class="bank-img" src="<?= base_url('img/') ?>' + bank.nama_bank + '.png" width="120px" style="cursor: pointer;" data-norek="' + bank.no_rek + '" alt="' + bank.nama_bank + '">' +
+                            '</div>';
+                    });
+
+                    $('#detail_bank').html(bankHtml);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Failed to fetch data:', error);
+                }
+            });
+        });
+
+        $('#detail_bank').on('click', '.bank-img', function() {
+            var nomor = $(this).data('norek');
+            navigator.clipboard.writeText(nomor)
+                .then(function() {
+                    showToast('success', 'Nomor Rekening berhasil disalin : ' + nomor);
+                })
+                .catch(function(err) {
+                    showToast('error', 'Nomor Rekening gagal disalin : ' + nomor);
+                });
+        });
     });
 
     function validateImageFile(input) {
@@ -331,6 +397,4 @@
     }
 </script>
 <?= $this->endSection('js') ?>
-
-
 <?= $this->include('temp_homepage/footer'); ?>

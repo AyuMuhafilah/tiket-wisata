@@ -21,7 +21,7 @@
     <div class="bg-white p-0" <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <a href="<?= base_url('/') ?>" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 class="m-0 text-primary text-uppercase">SafeToTrip</h1>
                 </a>
             </div>
@@ -39,11 +39,11 @@
                                     <img src="<?= (isset($user['profile']) ? base_url('img/profile/' . $user['profile']) : base_url('img/profile/User_Default.png')) ?>" class="user-circle me-2 mb-1" style="width: 30px; height: 30px; border-radius: 50%;"> <?= $nama ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?= base_url('profile') ?>">Profile</a>
+                                    <!-- <a class="dropdown-item" href="<?= base_url('profile') ?>">Profile</a> -->
                                     <?php if ($user['role'] === 'admin') : ?>
                                         <a class="dropdown-item" href="<?= base_url('/dashboard') ?>">Halaman Admin</a>
                                     <?php endif ?>
-                                    <a class="dropdown-item" href="<?= base_url('settings') ?>">History Pemesanan</a>
+                                    <a class="dropdown-item" href="<?= base_url('history/' . $user['id_user']) ?>">History Pemesanan</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a>
                                 </div>

@@ -38,6 +38,20 @@
         var toastData = <?= json_encode(session()->getFlashdata('toast')) ?>;
         showToast(toastData.icon, toastData.title);
     <?php endif; ?>
+
+    function formatRupiah(angka) {
+        var numberString = angka.toString(),
+            sisa = numberString.length % 3,
+            rupiah = numberString.substr(0, sisa),
+            ribuan = numberString.substr(sisa).match(/\d{3}/g);
+
+        if (ribuan) {
+            var separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        return 'Rp. ' + rupiah;
+    }
 </script>
 <?= $this->renderSection('js') ?>
 </body>

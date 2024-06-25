@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\FasilitasModel;
 use App\Models\HargaTiketModel;
+use App\Models\TransaksiModel;
 use App\Models\WisataModel;
 
 class Home extends BaseController
@@ -13,6 +14,7 @@ class Home extends BaseController
         $this->session   = session();
         $this->wisata    = new WisataModel();
         $this->fasilitas = new FasilitasModel();
+        $this->transaksi = new TransaksiModel();
         $this->harga     = new HargaTiketModel();
     }
 
@@ -88,5 +90,13 @@ class Home extends BaseController
             'icon' => $icon,
             'title' => 'Data ' . $title . '.'
         ]);
+    }
+
+    public function history($id_user)
+    {
+        $data = $this->getData();
+        $data['history'] = $this->transaksi->getHistoryTransaksi($id_user);
+        // dd($data);
+        return view('homepage/history', $data);
     }
 }
