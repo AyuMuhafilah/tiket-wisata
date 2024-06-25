@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\BankModel;
 use App\Models\DetailTransaksiModel;
 use App\Models\FasilitasModel;
 use App\Models\HargaTiketModel;
@@ -16,6 +17,7 @@ class Wisata extends BaseController
     {
         $this->session   = session();
         $this->home      = new Home();
+        $this->bank      = new BankModel();
         $this->admin     = new UserModel();
         $this->wisata    = new WisataModel();
         $this->fasilitas = new FasilitasModel();
@@ -186,7 +188,7 @@ class Wisata extends BaseController
             $this->home->toast('error', 'Transaksi Gagal Diproses');
         }
 
-        return redirect()->to('/');
+        return redirect()->to('history/' . $data['id_wisatawan']);
     }
 
     function buatIdTransaksi($userId, $prefix = 'TRX')
@@ -196,5 +198,18 @@ class Wisata extends BaseController
         // Menyusun ID transaksi
         $idTransaksi = $prefix . $timestamp . $userId;
         return $idTransaksi;
+    }
+
+    public function getDetailWisataById($id)
+    {
+        $wisata = [];
+        $wisata = $this->wisata->getJoinWisataId($id);
+        $fasilitas = $this->fasilitas->getFasilitasWisata($wisata['id_admin']);
+        $harga = $this->harga->getHargaAll($wisata['id_wisata']);
+        $bank = $this->bank->where('id_admin', $wisata['id_admin'])->findAll();
+        $wisata['fasilitas'] = $fasilitas;
+        $wisata['harga'] = $harga;
+        $wisata['bank'] = $bank;
+        return $this->response->setJSON($wisata);
     }
 }

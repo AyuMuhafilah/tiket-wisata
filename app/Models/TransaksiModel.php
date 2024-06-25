@@ -65,4 +65,13 @@ class TransaksiModel extends Model
             'total_penjualan' => $totalPenjualan['total_bayar'],
         ];
     }
+
+    public function getHistoryTransaksi($id_user)
+    {
+        return $this->select('transaksi.*, nama_wisata, deskripsi, gambar')
+            ->where('id_wisatawan', $id_user)
+            ->join('wisata', 'wisata.id_wisata = transaksi.id_wisata')
+            ->orderBy('tgl_transaksi', 'DESC')
+            ->findAll();
+    }
 }

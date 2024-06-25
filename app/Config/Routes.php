@@ -36,6 +36,7 @@ $routes->post('wisata/update', 'Wisata::update', ['filter' => 'otentifikasi']);
 $routes->post('wisata/delete', 'Wisata::delete', ['filter' => 'otentifikasi']);
 $routes->get('getWisata/(:num)', 'Wisata::getWisataById/$1');
 $routes->post('pesan-tiket', 'Wisata::pesan', ['filter' => 'otentifikasi']);
+$routes->get('getDetailWisata/(:num)', 'Wisata::getDetailWisataById/$1');
 
 // Harga
 $routes->get('harga', 'Harga::index', ['filter' => 'otentifikasi']);
@@ -74,3 +75,6 @@ $routes->get('laporan-penjualan', 'Wisatawan::allwisata', ['filter' => 'otentifi
 $routes->get('laporan-penjualan-wisata/(:num)', 'Transaksi::penjualan/$1', ['filter' => 'otentifikasi']);
 $routes->post('laporan-penjualan-wisata/(:num)', 'Transaksi::penjualan/$1', ['filter' => 'otentifikasi']);
 $routes->post('laporan-penjualan-pdf/(:num)', 'Transaksi::pdfPenjualanwisata/$1', ['filter' => 'otentifikasi']);
+
+$routes->get('history/(:num)', 'Home::history/$1', ['filter' => 'otentifikasi']);
+$routes->get('etiket/(:any)', 'Transaksi::eTiket/$1', ['filter' => 'otentifikasi']);

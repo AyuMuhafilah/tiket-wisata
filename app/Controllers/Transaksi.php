@@ -7,6 +7,10 @@ use App\Models\DetailTransaksiModel;
 use App\Models\TransaksiModel;
 use App\Models\WisataModel;
 use App\Libraries\Pdf;
+use CodeIgniter\Email\Email;
+// Setup PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class Transaksi extends BaseController
 {
@@ -35,12 +39,13 @@ class Transaksi extends BaseController
     public function terima()
     {
         $id = $this->request->getPost('id');
-        $tolak = $this->transaksi->update($id, ['status' => 'Selesai']);
-        if ($tolak) {
+        $terima = $this->transaksi->update($id, ['status' => 'Selesai']);
+        if ($terima) {
             $this->home->toast('success', 'Validasi Pembayaran Berhasil Diproses');
         } else {
             $this->home->toast('error', 'Validasi Pembayaran Gagal Diproses.');
         }
+        $this->eTiket($id);
         return redirect()->to('transaksi');
     }
 
@@ -53,6 +58,7 @@ class Transaksi extends BaseController
         } else {
             $this->home->toast('error', 'Validasi Pembayaran Gagal Diproses.');
         }
+        $this->emailTolak($id);
         return redirect()->to('transaksi');
     }
 
@@ -160,5 +166,68 @@ class Transaksi extends BaseController
         $html = view('adminpage/laporan/lap_penjualan', $data);
 
         $pdf->generate($html, $file_pdf, $paper, $orientation, true);
+    }
+
+    public function eTiket($id)
+    {
+        $pdf = new Pdf();
+        $file_pdf = WRITEPATH . 'etiket/' . $id . '.pdf';
+        $paper = 'A4';
+        $orientation = 'portrait';
+        $transaksi = $this->transaksi->getTransaksiById($id);
+        $detail = $this->detail->getDetail($id);
+        foreach ($detail as $val) {
+            $transaksi[$val['jenis_tiket']] = $val['jumlah_tiket'];
+            $transaksi['harga_' . $val['jenis_tiket']] = $val['harga'];
+        }
+        $data['transaksi'] = $transaksi;
+        $html = view('homepage/e-tiket', $data);
+        $pdf->generate($html, $file_pdf, $paper, $orientation, false);
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'ssl://smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = '20220810026@uniku.ac.id';
+            $mail->Password = 'rupzlihpnljoaeva';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 465;
+
+            $mail->setFrom('20220810026@uniku.ac.id', 'Ayu Muhafilah');
+            $mail->addAddress($transaksi['email']);
+            $mail->addAttachment($file_pdf, $id . '.pdf');
+            $mail->isHTML(true);
+            $mail->Subject = 'E-Tiket Wisata';
+            $mail->Body    = 'Berikut adalah e-tiket Anda.';
+            $mail->send();
+            $this->home->toast('success', 'E-Tiket Berhasil Dikirimkan Ke Email Pemesan');
+        } catch (Exception $e) {
+            $this->home->toast('success', 'E-Tiket Gagal Dikirimkan ' . $e);
+        }
+    }
+
+    public function emailTolak($id)
+    {
+        $transaksi = $this->transaksi->getTransaksiById($id);
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'ssl://smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = '20220810026@uniku.ac.id';
+            $mail->Password = 'rupzlihpnljoaeva';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 465;
+
+            $mail->setFrom('20220810026@uniku.ac.id', 'Ayu Muhafilah');
+            $mail->addAddress($transaksi['email']);
+            $mail->isHTML(true);
+            $mail->Subject = 'E-Tiket Wisata';
+            $mail->Body    = 'Mohon Maaf Transaksi Anda ditolak';
+            $mail->send();
+        } catch (Exception $e) {
+            $this->home->toast('success', 'E-Tiket Gagal Dikirimkan');
+        }
     }
 }

@@ -15,11 +15,17 @@ class Pdf
         $dompdf->loadHtml($html);
         $dompdf->setPaper($paper, $orientation);
         $dompdf->render();
+
         if ($stream) {
-            $dompdf->stream($filename . ".pdf", array("Attachment" => 0));
-            exit();
+            $dompdf->stream($filename . ".pdf", array("Attachment" => 1));
         } else {
-            return $dompdf->output();
+            $path = dirname($filename);
+            if (!is_dir($path)) {
+                mkdir($path, 0755, true);
+            }
+
+            $output = $dompdf->output();
+            file_put_contents($filename, $output);
         }
     }
 }

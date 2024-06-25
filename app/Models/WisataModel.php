@@ -47,6 +47,14 @@ class WisataModel extends Model
             ->findAll();
     }
 
+    function getJoinWisataId($id)
+    {
+        return $this->select('wisata.*, user.nama')
+            ->where('id_wisata', $id)
+            ->join('user', 'user.id_user = wisata.id_admin')
+            ->first();
+    }
+
     function getAdminWisata($id_admin)
     {
         return $this->where('id_admin', $id_admin)->first();
