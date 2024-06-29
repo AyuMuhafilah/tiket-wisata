@@ -97,7 +97,7 @@ class Transaksi extends BaseController
     public function pdfPenjualan()
     {
         $pdf = new Pdf();
-        $file_pdf = 'Laporan Pengunjung';
+        $file_pdf = 'Laporan Penjualan';
         $paper = 'A4';
         $orientation = "landscape";
 
@@ -133,18 +133,19 @@ class Transaksi extends BaseController
             $selesai = date('Y-m-d');
             $data['tgl'] = $mulai . ' - ' . $selesai;
         }
+        $wisata = $this->wisata->getJoinWisataId($id);
         $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
         $data['id'] = $id;
-        $data['total_tiket'] = $getData['total_anggota'];
-        $data['total'] = $getData['total_penjualan'];
         $data['transaksi'] = $getData['pengunjung'];
+        $data['nama_wisata'] = $wisata['nama_wisata'];
+        $data['total'] = $getData['total_penjualan'];
+        $data['total_tiket'] = $getData['total_anggota'];
         return view('adminpage/laporan/penjualan', $data);
     }
 
     public function pdfPenjualanwisata($id)
     {
         $pdf = new Pdf();
-        $file_pdf = 'Laporan Penjualan';
         $paper = 'A4';
         $orientation = "landscape";
 
@@ -155,6 +156,7 @@ class Transaksi extends BaseController
         $wisata = $this->wisata->where('id_wisata', $id)->first();
         $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
 
+        $file_pdf = 'Laporan Penjualan Wisata' . $wisata['nama_wisata'];
         $data = [
             'mulai'       => $mulai,
             'selesai'     => $selesai,

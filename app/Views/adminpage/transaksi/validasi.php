@@ -37,7 +37,7 @@
                                             <th>Jumlah Tiket</th>
                                             <th>Total Bayar</th>
                                             <th>Bukti Bayar</th>
-                                            <th>Aksi</th>
+                                            <th width="50">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

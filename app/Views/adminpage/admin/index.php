@@ -94,7 +94,7 @@
                                     <tbody>
                                         <?php $no = 1; ?>
                                         <?php foreach ($admin as $row) : ?>
-                                            <tr onclick="tampilkan(<?= $row['id_user'] ?>);">
+                                            <tr style="cursor: pointer;" onclick="tampilkan(<?= $row['id_user'] ?>);">
                                                 <td class="text-center"><?= $no++ ?></td>
                                                 <td><?= $row['nama'] ?></td>
                                                 <td><?= $row['no_hp'] ?></td>

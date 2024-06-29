@@ -46,7 +46,7 @@
                                             <tr class="text-center">
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $row['jenis_tiket'] ?></td>
-                                                <td><?= $row['harga'] ?></td>
+                                                <td><?= number_format($row['harga'], 0, '.', '.') ?></td>
                                                 <td><?= date('d-m-Y', strtotime($row['tgl_mulai'])) ?></td>
                                                 <td><?= date('d-m-Y', strtotime($row['tgl_selesai'])) ?></td>
                                                 <td>

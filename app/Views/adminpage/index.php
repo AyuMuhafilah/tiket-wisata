@@ -58,7 +58,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3><?= (isset($jml_tiket_terjual)) ?: 0 ?></h3>
+                            <h3><?= (isset($jml_tiket_terjual)) ? $jml_tiket_terjual : 0 ?></h3>
                             <p>Tiket Terjual</p>
                         </div>
                         <div class="icon">
@@ -67,6 +67,9 @@
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.225398484596!2d108.47393987520198!3d-6.982706593018197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f142cbfb88cf7%3A0xcc8554d54fdc4c47!2sTaman%20Kota%20Kuningan!5e0!3m2!1sen!2sid!4v1719342988575!5m2!1sen!2sid" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>

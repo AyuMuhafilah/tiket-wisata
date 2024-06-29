@@ -52,6 +52,9 @@ class Home extends BaseController
         $data['wisata'] = array_filter($data['wisata'], function ($wisata) {
             return !empty($wisata['fasilitas']) && !empty($wisata['harga']);
         });
+        $data['jml_admin'] = count($this->user->getAllAdmin());
+        $data['jml_wisata'] = count($this->wisata->getJoinWisata());
+        $data['jml_wisatawan'] = count($this->user->getAllWisatawan());
         return view('homepage/index', $data);
     }
 
@@ -64,9 +67,8 @@ class Home extends BaseController
         if ($data['user']['role'] === 'admin') {
             $data['jml_tiket_terjual'] = $this->transaksi->getJmlTransaksi($data['admin']['id_wisata'])['total_tiket'];
         } else {
-            $data['jml_tiket_terjual'] = $this->transaksi->getJmlTransaksi()['total_tiket'];
+            $data['jml_tiket_terjual'] = $this->transaksi->getAllTransaksi()['total_tiket'];
         }
-        // dd($data);
         return view('adminpage/index', $data);
     }
 

@@ -58,7 +58,7 @@
                         <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                                 <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                <h2 class="mb-1" data-toggle="counter-up">53</h2>
+                                <h2 class="mb-1" data-toggle="counter-up"><?= $jml_wisata ?></h2>
                                 <p class="mb-0">Tempat Wisata</p>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                         <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                                 <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                <h2 class="mb-1" data-toggle="counter-up">150</h2>
-                                <p class="mb-0">Admin Wisata</p>
+                                <h2 class="mb-1" data-toggle="counter-up"><?= $jml_admin ?></h2>
+                                <p class="mb-0">Admin</p>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                         <div class="border rounded p-1">
                             <div class="border rounded text-center p-4">
                                 <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                <h2 class="mb-1" data-toggle="counter-up">444</h2>
+                                <h2 class="mb-1" data-toggle="counter-up"><?= $jml_wisatawan ?></h2>
                                 <p class="mb-0">Wisatawan</p>
                             </div>
                         </div>

@@ -84,10 +84,13 @@ class Wisatawan extends BaseController
             $selesai = date('Y-m-d');
             $data['tgl'] = $mulai . ' - ' . $selesai;
         }
+        $wisata = $this->wisata->getJoinWisataId($id);
         $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
         $data['id'] = $id;
+        $data['nama_wisata'] = $wisata['nama_wisata'];
         $data['total'] = $getData['total_anggota'];
         $data['pengunjung'] = $getData['pengunjung'];
+        // dd($data);
         return view('adminpage/laporan/pengunjung', $data);
     }
 
@@ -95,7 +98,6 @@ class Wisatawan extends BaseController
     {
         $wisata = $this->wisata->where('id_wisata', $id)->first();
         $pdf = new Pdf();
-        $file_pdf = 'Laporan Pengunjung';
         $paper = 'A4';
         $orientation = "landscape";
 
@@ -105,6 +107,7 @@ class Wisatawan extends BaseController
         $selesai = $tanggalArray[1];
         $getData = $this->transaksi->getPengunjung($id, $mulai, $selesai);
 
+        $file_pdf = 'Laporan Pengunjung Wisata ' . $wisata['nama_wisata'];
         $data = [
             'mulai'        => $mulai,
             'selesai'      => $selesai,
